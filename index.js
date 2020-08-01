@@ -15,3 +15,18 @@ document.addEventListener("click", (e) => {
 		circle.classList.remove("expand");
 	}, 500);
 });
+
+// Moving eyes
+
+const eyeBalls = document.getElementsByClassName("ball");
+document.addEventListener("mousemove", (e) => {
+	let x = (e.clientX * 100) / window.innerWidth + "%";
+	let y = (e.clientY * 100) / window.innerHeight + "%";
+	console.log(eyeBalls.length);
+
+	for (let i = 0; i < eyeBalls.length; i++) {
+		eyeBalls[i].style.left = x;
+		eyeBalls[i].style.top = y;
+		eyeBalls[i].style.transform = `translate(-${x},-${y})`;
+	}
+});

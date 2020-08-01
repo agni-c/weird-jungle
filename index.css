@@ -7,12 +7,44 @@ body {
 	cursor: pointer;
 }
 
+/* Moving eyes */
+.eyes {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	text-align: center;
+	/* background-color: gray; */
+}
+.eye {
+	position: relative;
+	width: 240px;
+	height: 120px;
+	background: #fff;
+	display: inline-block;
+	border-radius: 50%;
+	margin: 40px;
+	overflow: hidden;
+}
+.ball {
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	background: #000;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 15px solid brown;
+}
+
 .circle {
 	position: absolute;
 	width: 23px;
 	height: 23px;
 	border-radius: 50%;
 	border: 3px solid white;
+	z-index: 1;
 
 	/* creates the beautiful lag */
 	transition-duration: 200ms;
@@ -28,6 +60,7 @@ body {
 	opacity: 0.5;
 	border-radius: 50%;
 	border: 8px solid tomato;
+	z-index: 1;
 
 	/* To center things reduce amount pixel from position */
 	top: -14px;
